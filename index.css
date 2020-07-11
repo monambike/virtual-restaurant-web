@@ -15,6 +15,7 @@ body{
 	font-family: "Times New Roman", Times, serif;
 	font-size: 16pt;
 	margin: 0px;
+	word-break: break-all;
 }
 /*Textos*/
 h3{
@@ -56,15 +57,21 @@ nav a{
 }
 /*Hover*/
 nav a:hover{
-	color: var(--red);
-	transition: 0.5;
+	color: var(--white);
+	transition: 0.05s;
 }
 nav ul li:hover{
-	background-color: var(--white);
+	background-color: var(--red);
+	transition: 0.05s;
 }
 /*Active*/
 nav a:active{
-	color: var(--bright-red);
+	color: var(--red);
+	transition: 0.05s;
+}
+nav ul li:active{
+	background-color: var(--white);
+	transition: 0.05s;
 }
 
 /*TÍTULO*/
@@ -81,7 +88,7 @@ nav a:active{
 	text-shadow: -6px 6px var(--black);
 }
 #section-title h2{
-	background-color: var(--red);
+	background-color: var(--bright-red);
 	color: var(--white);
 	font-size: 4rem;
 	text-shadow: -6px 6px var(--dark-red);
@@ -101,6 +108,7 @@ nav a:active{
 }
 #section-howwework h3{
 	color: var(--bright-red);
+	font-size: 3rem;
 	text-align: center;
 	text-shadow: -2px 2px var(--dark-red);
 }
@@ -123,13 +131,16 @@ nav a:active{
 .product:nth-child(1), .product:nth-child(3){
 	margin: 0px 2.5% 0px 2.5%;
 }.product{
-	background-color: var(--red);
+	background-color: var(--bright-red);
 }
 /*Textos*/
 #section-products h3{
 	color: var(--white);
+	font-size: 3rem;
+	text-shadow: -2px 2px var(--dark-red);
 }
 #section-products h4{
+	margin: 0px;
 	padding: 20px;
 }
 #section-products p{
@@ -149,7 +160,9 @@ nav a:active{
 }
 #alert-product{
 	background-color: white;
-	border: 2px solid var(--black);
+	border-top: 10px solid var(--bright-red);
+	border-bottom: 10px solid var(--bright-red);
+	border-top-left-radius: 5px;
 	height: 80vh;
 	margin: 10vh auto 0px auto;
 	overflow-x: hidden;
@@ -162,7 +175,7 @@ nav a:active{
 	text-align: center;
 }
 #alert-body{
-	background-color: var(--red);
+	background-color: var(--bright-red);
 	color: var(--white);
 	margin: 0px;
 	text-align: justify;
@@ -185,6 +198,10 @@ nav a:active{
 	min-height: 100vh;
 	padding-top: 92px;
 	text-align: center;
+}
+#section-contact h3{
+	font-size: 3rem;
+	text-shadow: -2px 2px var(--dark-red);
 }
 /*Entradas*/
 .div-input{
@@ -214,7 +231,7 @@ label{
 .div-input:nth-child(5){
 	border: 0px;
 	height: 75px;
-	padding: 0px 200px 0px 0px;
+	padding: 0px;
 }
 button{
 	border-width: 10px;
@@ -248,4 +265,18 @@ footer{
 	background-color: var(--black);
 	color: var(--white);
 	text-align: center;
+}
+
+@media only screen and (max-width: 600px){
+	/*Botões*/
+	.div-input:nth-child(5){
+		width: auto;
+	}
+}
+
+@media only screen and (min-width: 600px){
+	/*Botões*/
+	.div-input:nth-child(5){
+		width: 20%;
+	}
 }

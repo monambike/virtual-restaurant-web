@@ -3,6 +3,13 @@
 	<head>
 		<title>Restaurantinho LTDA.</title>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--Bootstrap-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+		<!--Scripts e CSS-->	
 		<link rel="stylesheet" type="text/css" href="index.css">
 		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
 		<!--Ícones-->
@@ -18,12 +25,15 @@
 	</div>
 	<body>
 		<nav id="navbar">
-			<ul>
-				<a href="#section-title"><li>INÍCIO</li></a>
-				<a href="#section-howwework"><li>COMO TRABALHAMOS?</li></a>
-				<a href="#section-products"><li>PRODUTOS</li></a>
-				<a href="#section-contact"><li>CONTATO</li></a>
+			<ul id="aaa">
+				<a id="nav1" href="#section-title"><li>INÍCIO</li></a>
+				<a id="nav2" href="#section-howwework"><li>COMO TRABALHAMOS?</li></a>
+				<a id="nav3" href="#section-products"><li>PRODUTOS</li></a>
+				<a id="nav4" href="#section-contact"><li>CONTATO</li></a>
 			</ul>
+			<div class="progress">
+				<div id="progress-scroll" class="progress-bar bg-danger"></div>
+			</div>
 		</nav>
 
 		<section id="section-title">
@@ -82,7 +92,8 @@
 					<button type="button" onmousedown="seeProduct(3)">Ver produto</button>
 				</div>
 			</article>
-			products
+			<!--Para ajudar o div a se ajustar-->
+			<span style="opacity: 0px;user-select: none;">products</span>
 		</section>
 
 		<section id="section-location">
@@ -150,22 +161,26 @@
 			function seeProduct(product){
 				alert.style.display = "block";
 
-				switch(product){
-					case 1:
-						title.innerHTML = "Produto 1";
-						body.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-						break;
-					case 2:
-						title.innerHTML = "Produto 2";
-						body.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-						break;
-					case 3:
-						title.innerHTML = "Produto 3";
-						body.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-						break;
-					return;
-				}
+				var productTitle = [
+					"Produto 1",
 
+					"Produto 2",
+
+					"Produto 3"
+				];
+
+				var bodyTitle = [
+					"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+
+					"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+
+					"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				];
+
+				//Textos
+				title.innerHTML = productTitle[product-1];
+				body.innerHTML = bodyTitle[product-1];
+				//Imagens
 				image.src = "images/food-"+product+".jpg";
 				image.alt = "Imagem do produto "+product;
 				image.title = "produto "+product;
@@ -173,15 +188,17 @@
 
 			window.onclick = function(){
 				if(event.target === alert){
-					alert.style.display = "none";					
+					alert.style.display = "none";				
 				}
 			}
 
 			setInterval(function(){
 				if(alert.style.display === "block"){
 					navbar.style.display = "none";
+					document.body.style.overflow = "hidden";
 				}else{
 					navbar.style.display = "block";
+					document.body.style.overflow = "auto";
 				}
 			}, 500)
 		</script>
