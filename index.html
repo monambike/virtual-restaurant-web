@@ -24,12 +24,24 @@
 		</div>
 	</div>
 	<body>
-		<nav id="navbar">
-			<ul id="aaa">
-				<a id="nav1" href="#section-title"><li>INÍCIO</li></a>
-				<a id="nav2" href="#section-howwework"><li>COMO TRABALHAMOS?</li></a>
-				<a id="nav3" href="#section-products"><li>PRODUTOS</li></a>
-				<a id="nav4" href="#section-contact"><li>CONTATO</li></a>
+		<div id="hamburguer">
+			&#9776
+		</div>
+		<nav id="navbar-phone">
+			<ul>
+				<a href="#section-title"><li>INÍCIO</li></a>
+				<a href="#section-howwework"><li>COMO TRABALHAMOS?</li></a>
+				<a href="#section-products"><li>PRODUTOS</li></a>
+				<a href="#section-contact"><li>CONTATO</li></a>
+			</ul>
+		</nav>
+
+		<nav id="navbar-pc">
+			<ul>
+				<a href="#section-title"><li>INÍCIO</li></a>
+				<a href="#section-howwework"><li>COMO TRABALHAMOS?</li></a>
+				<a href="#section-products"><li>PRODUTOS</li></a>
+				<a href="#section-contact"><li>CONTATO</li></a>
 			</ul>
 			<div class="progress">
 				<div id="progress-scroll" class="progress-bar bg-danger"></div>
@@ -37,12 +49,15 @@
 		</nav>
 
 		<section id="section-title">
-			<h1>RESTAURANTINHO LTDA.</h1>
-			<h2>o restaurante com os melhores produtos do mundo!</h2>
+			<div id="div-title">
+				<h1>RESTAURANTINHO&nbsp;LTDA.</h1>
+				<br>
+				<h2>o restaurante com os melhores produtos do mundo!</h2>
+			</div>
 		</section>
 
 		<section id="section-howwework">
-			<h3>COMO TRABALHAMOS?</h3>
+			<h3>COMO&nbsp;TRABALHAMOS?</h3>
 			<article>
 				<br>
 				<br>
@@ -151,7 +166,7 @@
 		</footer>
 
 		<script type="text/javascript">
-			var navbar = document.getElementById("navbar");
+			var navbar = document.getElementById("navbar-pc");
 			var	alert = document.getElementById("alert-box");
 			var	title = document.getElementById("alert-title");
 			var	body = document.getElementById("alert-body");
