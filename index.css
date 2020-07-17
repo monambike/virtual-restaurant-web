@@ -72,12 +72,6 @@ h4{
 	text-align: center;
 }
 #article-products{width: 100%;}
-#article-products .product{
-	float: left;
-	height: 100%;
-	width: 30%;
-}
-.product:nth-child(1), .product:nth-child(3){margin: 0px 2.5% 0px 2.5%;}
 .product{background-color: var(--bright-red);}
 /*Textos*/
 #section-products h3{
@@ -266,12 +260,24 @@ footer{
 		transition: 0.05s;
 	}
 
+	/*PRODUTOS*/	
+	#article-products .product{
+		float: left;
+		height: 100%;
+		width: 30%;
+	}
+	.product:nth-child(1), .product:nth-child(3){margin: 0px 2.5% 0px 2.5%;}
+
 	/*CONTATO*/
 	/*Botões*/
 	.div-input:nth-child(5){width: 25%;}
 }
 
 @media only screen and (orientation: portrait){
+	/*GERAL*/
+	/*Divisões principais*/
+	#section-title{padding: 100px 0px 100px 0px;}
+
 	/*NAVEGAÇÃO*/
 	#div-hamburguer, #navbar-phone{display: block;}
 	#navbar-pc{display: none;}
@@ -320,6 +326,12 @@ footer{
 	}
 	/*Ativo*/
 	#navbar-phone span:active, #navbar-phone li:active{color: var(--red);}
+
+	/*PRODUTOS*/	
+	#article-products .product{
+		height: 100%;
+	}
+	.product:nth-child(1), .product:nth-child(2), .product:nth-child(3){margin: 60px 5% 60px 5%;}
 
 	/*CONTATO*/
 	/*Botões*/
