@@ -8,9 +8,7 @@
 	--red: rgba(160,0,0,1);
 	--white: rgba(245,245,245,1);
 }
-html{
-	word-break: break-all;
-}
+html{word-break: break-all;}
 body{
 	background: var(--red) url(images/cutlery.jpg) center/cover no-repeat fixed;
 	/*background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;*/
@@ -30,55 +28,8 @@ h4{
 	text-transform: uppercase;
 }
 
-/*NAVEGAÇÃO*/
-#navbar-pc{
-	background-color: var(--black);
-	font-size: 2rem;
-	margin: 0px;
-	opacity: 0.1;
-	position: fixed;
-	transition: 0.5s;
-	width: 100%;
-}
-#navbar-pc:hover{
-	opacity: 1;
-	transition: 0.5s;
-}
-#navbar-pc ul{
-	margin: 0px;
-	padding: 0px;
-}
-#navbar-pc ul li{
-	display: inline-block;
-	list-style: none;
-	padding: 20px;
-}
-#navbar-pc a{
-	color: var(--white);
-	text-decoration: none;
-}
-/*Hover*/
-#navbar-pc a:hover{
-	color: var(--white);
-	transition: 0.05s;
-}
-#navbar-pc ul li:hover{
-	background-color: var(--red);
-	transition: 0.05s;
-}
-/*Active*/
-#navbar-pc a:active{
-	color: var(--red);
-	transition: 0.05s;
-}
-#navbar-pc ul li:active{
-	background-color: var(--white);
-	transition: 0.05s;
-}
-
 /*TÍTULO*/
 #section-title{
-	min-height: 100vh;
 	text-align: center;
 	width: 100%;
 }
@@ -100,8 +51,6 @@ h4{
 /*COMO TRABALHAMOS*/
 #section-howwework{
 	background-color: var(--white);
-	font-size: 3rem;
-	min-height: 100vh;
 	padding-top: 92px;
 	vertical-align: middle;
 }
@@ -119,23 +68,17 @@ h4{
 /*PRODUTOS*/
 #section-products{
 	background-color: var(--black);
-	min-height: 100vh;
 	padding-top: 92px;
 	text-align: center;
 }
-#article-products{
-	width: 100%;
-}
+#article-products{width: 100%;}
 #article-products .product{
 	float: left;
 	height: 100%;
 	width: 30%;
 }
-.product:nth-child(1), .product:nth-child(3){
-	margin: 0px 2.5% 0px 2.5%;
-}.product{
-	background-color: var(--bright-red);
-}
+.product:nth-child(1), .product:nth-child(3){margin: 0px 2.5% 0px 2.5%;}
+.product{background-color: var(--bright-red);}
 /*Textos*/
 #section-products h3{
 	color: var(--white);
@@ -162,11 +105,12 @@ h4{
 	position: fixed;
 	width: 100vw;
 }
+
 #alert-product{
 	background-color: white;
 	border-top: 10px solid var(--bright-red);
 	border-bottom: 10px solid var(--bright-red);
-	border-top-left-radius: 5px;
+	border-radius: 5px;
 	height: 80vh;
 	margin: 10vh auto 0px auto;
 	overflow-x: hidden;
@@ -191,15 +135,11 @@ h4{
 }
 
 /*LOCATION*/
-#section-location{
-	background: var(--black) url(images/restaurant-above.jpg) center/cover no-repeat;
-	min-height: 100vh;
-}
+#section-location{	background: var(--black) url(images/restaurant-above.jpg) center/cover no-repeat;}
 
 /*CONTATO*/
 #section-contact{
 	background-color: var(--white);
-	min-height: 100vh;
 	padding-top: 92px;
 	text-align: center;
 }
@@ -223,9 +163,7 @@ input[type=name], input[type=email], textarea{
 	resize: none;
 	width: 100%;
 }
-textarea{
-	height: 200px;
-}
+textarea{height: 200px;}
 label{
 	color: var(--dark-gray);
 	font-size: 2rem;
@@ -240,10 +178,11 @@ label{
 button{
 	border-width: 10px;
 	cursor: pointer;
-	font-size: 2em;
+	font-size: 2rem;
 	height: 100%;
 	text-align: center;
 	width: 100%;
+	word-break: keep-all;
 	/*Cores*/
 	background-color: var(--white);
 	border-top-color: var(--white);
@@ -271,28 +210,118 @@ footer{
 	text-align: center;
 }
 
-@media only screen and (max-width: 600px){
-	/*Navegação*/
-	/*#navbar-phone, #hamburguer{display: block;}
-	#navbar-pc{display: none;}*/
+/*Fix and remove this code*/
 
-	/*Botões*/
-	.div-input:nth-child(5){
-		width: auto;
+@media only screen and (orientation: landscape){
+	/*GERAL*/
+	/*Divisões principais*/
+	body section, body footer{min-height: 100vh;}
+
+	/*NAVEGAÇÃO*/
+	#navbar-phone, #div-hamburguer{display: none;}
+	#navbar-pc{display: none;}
+	/*PC*/
+	#navbar-pc{
+		background-color: var(--black);
+		font-size: 2rem;
+		margin: 0px;
+		opacity: 0.1;
+		position: fixed;
+		transition: 0.5s;
+		width: 100%;
 	}
+	#navbar-pc:hover{
+		opacity: 1;
+		transition: 0.5s;
+	}
+	#navbar-pc ul{
+		margin: 0px;
+		padding: 0px;
+	}
+	#navbar-pc ul li{
+		display: inline-block;
+		list-style: none;
+		padding: 20px;
+	}
+	#navbar-pc a{
+		color: var(--white);
+		text-decoration: none;
+	}
+	/*Hover*/
+	#navbar-pc a:hover{
+		color: var(--white);
+		transition: 0.05s;
+	}
+	#navbar-pc ul li:hover{
+		background-color: var(--red);
+		transition: 0.05s;
+	}
+	/*Active*/
+	#navbar-pc a:active{
+		color: var(--red);
+		transition: 0.05s;
+	}
+	#navbar-pc ul li:active{
+		background-color: var(--white);
+		transition: 0.05s;
+	}
+
+	/*CONTATO*/
+	/*Botões*/
+	.div-input:nth-child(5){width: 25%;}
 }
 
-/*Fix and remove this code*/
-#navbar-phone, #hamburguer{display: none;}
-#navbar-pc{display: none;}
-
-@media only screen and (min-width: 600px){
-	/*Navegação*/
-	/*#navbar-phone, #hamburguer{display: none;}
-	#navbar-pc{display: block;}*/
-
-	/*Botões*/
-	.div-input:nth-child(5){
-		width: 20%;
+@media only screen and (orientation: portrait){
+	/*NAVEGAÇÃO*/
+	#div-hamburguer, #navbar-phone{display: block;}
+	#navbar-pc{display: none;}
+	/*CELULAR*/
+	#div-hamburguer{
+		background-color: var(--dark-red);
+		color: var(--white);
+		padding: 20px;
+		position: fixed;
+		transition: 0.5s;
+		width: 100%;
 	}
+	/*Botão do "Hamburguer" Menu*/
+	#div-hamburguer span:nth-child(1){
+		cursor: pointer;
+		margin: 0px 20px 0px 0px;
+	}
+	#navbar-phone{
+		background-color: var(--dark-red);
+		height: 100%;
+		left: 0;
+		overflow-x: hidden;
+		position: fixed;
+		top: 0;
+		transition: 0.5s;
+		width: 0;
+		word-break: keep-all;
+	}
+	/*Botão X*/
+	#navbar-phone span{
+		color: var(--white);
+		cursor: pointer;
+		padding: 20px;
+		text-align: center;
+		vertical-align: middle;
+	}
+	/*Links*/
+	#navbar-phone ul{padding: 0px;}
+	#navbar-phone a{text-decoration: none;}
+	#navbar-phone li{
+		color: var(--white);
+		border-bottom: 6px solid var(--red);
+		margin: 20px 0px 20px 20px;
+		list-style: none;
+		width: 80%;
+	}
+	/*Ativo*/
+	#navbar-phone span:active, #navbar-phone li:active{color: var(--red);}
+
+	/*CONTATO*/
+	/*Botões*/
+	.div-input:nth-child(5){width: auto;}
 }

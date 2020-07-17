@@ -24,11 +24,15 @@
 		</div>
 	</div>
 	<body>
-		<div id="hamburguer">
-			&#9776
+		<div id="div-hamburguer">
+			<span onmousedown="openHamburguer()">&#9776;</span><span>RESTAURANTINHO</span>
 		</div>
 		<nav id="navbar-phone">
 			<ul>
+				<br>
+				<span onmousedown="closeHamburguer()">X&nbsp;&nbsp;&nbsp;FECHAR</span>
+				<br>
+				<br>
 				<a href="#section-title"><li>INÍCIO</li></a>
 				<a href="#section-howwework"><li>COMO TRABALHAMOS?</li></a>
 				<a href="#section-products"><li>PRODUTOS</li></a>
@@ -62,6 +66,7 @@
 				<br>
 				<br>
 				<h4>A empresa restaurantinho ltda se importa com:</h4>
+				<br>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -90,21 +95,21 @@
 					<img src="images/food-1.jpg" alt="Imagem do produto 1" title="produto 1">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua.[...]</p>
-					<button type="button" onmousedown="seeProduct(1)">Ver produto</button>
+					<button type="button" onmousedown="seeProduct(1)">Ver Produto</button>
 				</div>
 				<div class="product">
-					<h4>Produto 1</h4>
+					<h4>Produto 2</h4>
 					<img src="images/food-2.jpg" alt="Imagem do produto 2" title="produto 2">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua.[...]</p>
-					<button type="button" onmousedown="seeProduct(2)">Ver produto</button>
+					<button type="button" onmousedown="seeProduct(2)">Ver Produto</button>
 				</div>
 				<div class="product">
-					<h4>Produto 1</h4>
+					<h4>Produto 3</h4>
 					<img src="images/food-3.jpg" alt="Imagem do produto 3" title="produto 3">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua.[...]</p>
-					<button type="button" onmousedown="seeProduct(3)">Ver produto</button>
+					<button type="button" onmousedown="seeProduct(3)">Ver Produto</button>
 				</div>
 			</article>
 			<!--Para ajudar o div a se ajustar-->
@@ -166,7 +171,11 @@
 		</footer>
 
 		<script type="text/javascript">
-			var navbar = document.getElementById("navbar-pc");
+			//Navegação
+			var navbar_pc = document.getElementById("navbar-pc");
+			var navbar_phone = document.getElementById("navbar-phone");
+			var div_hamburguer = document.getElementById("div-hamburguer");
+			//Caixa de alerta
 			var	alert = document.getElementById("alert-box");
 			var	title = document.getElementById("alert-title");
 			var	body = document.getElementById("alert-body");
@@ -201,6 +210,15 @@
 				image.title = "produto "+product;
 			}
 
+			function openHamburguer(){
+				navbar_phone.style.width = "60%";
+				div_hamburguer.style.marginLeft = "60%";
+			}
+			function closeHamburguer(){
+				navbar_phone.style.width = "0";
+				div_hamburguer.style.marginLeft = "0";				
+			}
+
 			window.onclick = function(){
 				if(event.target === alert){
 					alert.style.display = "none";				
@@ -208,12 +226,14 @@
 			}
 
 			setInterval(function(){
-				if(alert.style.display === "block"){
-					navbar.style.display = "none";
-					document.body.style.overflow = "hidden";
-				}else{
-					navbar.style.display = "block";
-					document.body.style.overflow = "auto";
+				if (window.matchMedia("(min-width: 600px)").matches) {
+					if(alert.style.display === "block"){
+						navbar_pc.style.display = "none";
+						document.body.style.overflow = "hidden";
+					}else{
+						navbar_pc.style.display = "block";
+						document.body.style.overflow = "auto";
+					}
 				}
 			}, 500)
 		</script>
