@@ -16,17 +16,22 @@
 		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 	</head>
-	<div id="alert-box" style="display: none;">
-		<div id="alert-product">
-			<h4 id="alert-title">Title</h4>
-			<img id="alert-image">
-			<p id="alert-body">Text</p>
-		</div>
-	</div>
+
 	<body>
+		<!-- Caixa de Alerta -->
+		<div id="alert-box" style="display: none;">
+			<div id="alert-product">
+				<h4 id="alert-title">Title</h4>
+				<img id="alert-image">
+				<p id="alert-body">Text</p>
+			</div>
+		</div>
+
+		<!-- Div Hamburguer Menu -->
 		<div id="div-hamburguer">
 			<span onmousedown="openHamburguer()">&#9776;</span><span>RESTAURANTINHO</span>
 		</div>
+		<!-- Navbar Celular -->
 		<nav id="navbar-phone">
 			<ul>
 				<br>
@@ -39,7 +44,7 @@
 				<a href="#section-contact"><li>CONTATO</li></a>
 			</ul>
 		</nav>
-
+		<!-- Navbar PC -->
 		<nav id="navbar-pc">
 			<ul>
 				<a href="#section-title"><li>INÍCIO</li></a>
@@ -52,6 +57,7 @@
 			</div>
 		</nav>
 
+		<!-- Primeira Seção - Título -->
 		<section id="section-title">
 			<div id="div-title">
 				<h1>RESTAURANTINHO&nbsp;LTDA.</h1>
@@ -60,6 +66,7 @@
 			</div>
 		</section>
 
+		<!-- Segunda Seção - Como Trabalhamos -->
 		<section id="section-howwework">
 			<h3>COMO&nbsp;TRABALHAMOS?</h3>
 			<article>
@@ -85,6 +92,7 @@
 			</article>
 		</section>
 
+		<!-- Terceira Seção - Produtos -->
 		<section id="section-products">
 			<h3>PRODUTOS</h3>
 			<br>
@@ -119,6 +127,7 @@
 		<section id="section-location">
 		</section>
 
+		<!-- Quarta Seção - Produtos -->
 		<section id="section-contact">
 			<h3>CONTATO</h3>
 			<br>
@@ -148,6 +157,7 @@
 			</form>
 		</section>
 
+		<!-- Rodapé -->
 		<footer>
 			<br>
 			<br>
@@ -171,6 +181,7 @@
 		</footer>
 
 		<script type="text/javascript">
+			//VARIÁVEIS
 			//Navegação
 			var navbar_pc = document.getElementById("navbar-pc");
 			var navbar_phone = document.getElementById("navbar-phone");
@@ -181,7 +192,7 @@
 			var	body = document.getElementById("alert-body");
 			var	image = document.getElementById("alert-image");
 
-			//Caixa de alerta
+			//Carregar caixa de alerta
 			function seeProduct(product){
 				alert.style.display = "block";
 
@@ -209,22 +220,13 @@
 				image.alt = "Imagem do produto "+product;
 				image.title = "produto "+product;
 			}
-
-			function openHamburguer(){
-				navbar_phone.style.width = "60%";
-				div_hamburguer.style.marginLeft = "60%";
-			}
-			function closeHamburguer(){
-				navbar_phone.style.width = "0";
-				div_hamburguer.style.marginLeft = "0";				
-			}
-
+			//Fecha a caixa de alerta caso o usuário clique fora
 			window.onclick = function(){
 				if(event.target === alert){
 					alert.style.display = "none";				
 				}
 			}
-
+			//Verifica o que deixar visível e invisível
 			setInterval(function(){
 				if (window.matchMedia("(min-width: 600px)").matches) {
 					if(alert.style.display === "block"){
@@ -236,6 +238,16 @@
 					}
 				}
 			}, 500)
+
+			//Abrir e fechar menu no celular
+			function openHamburguer(){
+				navbar_phone.style.width = "60%";
+				div_hamburguer.style.marginLeft = "60%";
+			}
+			function closeHamburguer(){
+				navbar_phone.style.width = "0";
+				div_hamburguer.style.marginLeft = "0";				
+			}
 		</script>
 	</body>
 </html>

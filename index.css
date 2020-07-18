@@ -19,7 +19,7 @@ body{
 }
 /*Textos*/
 h3{
-	font-size: 5rem;
+	font-size: 6vw;
 	margin: 0px;
 }
 h4{
@@ -36,7 +36,7 @@ h4{
 #section-title h1{
 	color: var(--white);
 	font-family: fantasy;
-	font-size: 6vw;
+	font-size: 8vw;
 	margin: 0px;
 	padding-top: 10%;
 	text-shadow: -0.5vw 0.5vw var(--black);
@@ -60,7 +60,6 @@ h4{
 }
 #section-howwework h3{
 	color: var(--bright-red);
-	font-size: 4vw;
 	text-align: center;
 	text-shadow: -0.2vw 0.2vw var(--dark-red);
 }
@@ -76,7 +75,6 @@ h4{
 /*Textos*/
 #section-products h3{
 	color: var(--white);
-	font-size: 4vw;
 	text-shadow: -0.2vw 0.2vw var(--dark-red);
 }
 #section-products h4{
@@ -138,7 +136,6 @@ h4{
 	text-align: center;
 }
 #section-contact h3{
-	font-size: 4vw;
 	text-shadow: -0.2vw 0.2vw var(--gray);
 }
 /*Entradas*/
