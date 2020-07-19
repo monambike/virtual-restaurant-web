@@ -16,12 +16,15 @@
 		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 	</head>
-
 	<body>
 		<!-- Caixa de Alerta -->
 		<div id="alert-box" style="display: none;">
 			<div id="alert-product" onscroll="showCloseButton()">
-				<div id="alert-close"><span onmousedown="alert_box.style.display = 'none'">X&nbsp;FECHAR</span></div>
+				<div id="alert-close">
+					<span onmousedown="alert_box.style.display = 'none'">X&nbsp;FECHAR</span>
+				</div>
+				<br>
+				<br>
 				<h4 id="alert-title">Title</h4>
 				<img id="alert-image">
 				<p id="alert-body">Text</p>
@@ -225,6 +228,8 @@
 				image.src = "images/food-"+product+".jpg";
 				image.alt = "Imagem do produto "+product;
 				image.title = "produto "+product;
+
+				showCloseButton();
 			}
 			//Fecha a caixa de alerta caso o usuário clique fora
 			window.onclick = function(){
@@ -232,9 +237,9 @@
 					alert_box.style.display = "none";				
 				}
 			}
-			//Verifica o que deixar visível e invisível
 			setInterval(function(){
 				if (window.matchMedia("(orientation: landscape)").matches) {
+					//Muda a visibilidade da barra de navegação de acordo com a caixa de alerta
 					if(alert_box.style.display === "block"){
 						navbar_pc.style.display = "none";
 						document.body.style.overflow = "hidden";
@@ -242,6 +247,8 @@
 						navbar_pc.style.display = "block";
 						document.body.style.overflow = "auto";
 					}
+				}else{
+					navbar_pc.style.display = "none";
 				}
 			}, 500)
 
@@ -257,7 +264,7 @@
 
 			function showCloseButton(){
 				if(window.matchMedia("(orientation: portrait)").matches){
-					if(alert_product.scrollTop > lastScroll){
+					if(alert_product.scrollTop > lastScroll || alert_product.scrollTop === 0){
 						alert_close.style.height = "40px"
 					}else if(alert_product.scrollTop < lastScroll){
 						alert_close.style.height = "0px"
