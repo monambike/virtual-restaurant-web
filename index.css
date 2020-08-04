@@ -135,7 +135,7 @@ h4{
 }
 
 /*LOCATION*/
-#section-location{	background: var(--black) url(images/restaurant-above.jpg) center/cover no-repeat;}
+#div-location{	background: var(--black) url(images/restaurant-above.jpg) center/cover no-repeat;}
 
 /*CONTATO*/
 #section-contact{
@@ -214,7 +214,7 @@ footer{
 @media only screen and (orientation: landscape){
 	/*GERAL*/
 	/*Divisões principais*/
-	body section, body footer{min-height: 100vh;}
+	section, footer, #div-location{min-height: 100vh;}
 
 	/*NAVEGAÇÃO*/
 	#navbar-phone, #div-hamburguer{display: none;}
