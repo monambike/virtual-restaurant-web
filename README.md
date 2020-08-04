@@ -2,7 +2,7 @@
 ### (virtualrestaurant_web)
 
 ## LANGUAGE
-| [PT-BR](#PORTUGUÊS---TOPO) | [EN-US](#ENGLISH---TOP) | [ES-ES](ESPAÑOL---#TOPO) | [JA-JP](#日本語---トップ) |
+| [PT-BR](#PORTUGUÊS---TOPO) | [EN-US](#ENGLISH---TOP) | [ES-ES](#ESPAÑOL---TOPO) | [JA-JP](#日本語---トップ) |
 |-|-|-|-|
 
 ## PORTUGUÊS - [TOPO](#RESTAURANTINHO-LTDA)
@@ -17,6 +17,6 @@ If you want to see my website, you can see it [here](http://localhost/virtualres
 Esto sitio es un modelo web de página única de un restaurante que hice para practicar y mejorar mis habilidades con programación. El concepto de lo sitio es muy simple, pero todavía así, fue capaz de ayudarme a esclarecer muchas dudas y conceptos de HTML, CSS y Javascript.
 Si quieres mirar a mí sitio, puedes verlo [acá](http://localhost/virtualrestaurant_web/) o hacer el download de su contenido disponible en [mi GitHub](https://github.com/monambike/).
 
-## 日本語　- [トップ](#RESTAURANTINHO-LTDA)
+## 日本語 - [トップ](#RESTAURANTINHO-LTDA)
 このサイトはレストランのユニークページモデル。　プログラミングスキールをプラクティスとアップグレードのをしたいでした。　サイトのコンセプトはめっちゃシンプル、けど、HTML、CSS、JavaScriptを分かりますのを助けた。
 サイトを見たいなら、[ここで](http://localhost/virtualrestaurant_web/)できます、 またはダウロードするに[俺のGitHub](https://github.com/monambike/).
