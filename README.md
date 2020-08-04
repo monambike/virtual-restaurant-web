@@ -2,10 +2,10 @@
 ### (virtualrestaurant_web)
 
 ## LANGUAGE
-| [PT-BR](#PORTUGUÊS---TOPO) | [EN-US](#ENGLISH---TOP) | [ES-ES](ESPAÑOL---#TOPO) | [JA-JP](#日本語-ー-トップ) |
+| [PT-BR](#PORTUGUÊS---TOPO) | [EN-US](#ENGLISH---TOP) | [ES-ES](ESPAÑOL---#TOPO) | [JA-JP](#日本語---トップ) |
 |-|-|-|-|
 
-## PORTUGUÊS - [TOPO](#RESTAURANTINHO-LTDA.)
+## PORTUGUÊS - [TOPO](#RESTAURANTINHO-LTDA)
 Esse site é um modelo web da página única de um restaurante que fiz para treinar e melhorar as minhas habilidades com programação. O conceito do site é bastante simples à priori, porém ainda assim, foi capaz de me ajudar a esclarecer muito conceitos de HTML, CSS e Javascript.
 Caso queira ver o meu site, você pode conferir ele [aqui](http://localhost/virtualrestaurant_web/) ou baixar o conteúdo dele disponível no [meu GitHub](https://github.com/monambike/).
 
