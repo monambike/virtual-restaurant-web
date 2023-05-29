@@ -24,3 +24,10 @@ Si quieres mirar a mí sitio, puedes verlo [acá](http://localhost/virtualrestau
 このサイトはレストランのユニークページモデル。　プログラミングスキールをプラクティスとアップグレードのをしたいでした。　サイトのコンセプトはめっちゃシンプル、けど、HTML、CSS、JavaScriptを分かりますのを助けた。
 
 サイトを見たいなら、[ここで](http://localhost/virtualrestaurant_web/)できます、 またはダウロードするに[俺のGitHub](https://github.com/monambike/).
+
+## WEBSITE IMAGES
+
+![restaurantinho-1](https://github.com/monambike/virtual-restaurant-web/assets/35270174/e6a9d962-402b-4609-b4f6-77e267e37085)
+![restaurantinho-2](https://github.com/monambike/virtual-restaurant-web/assets/35270174/f811f806-ac88-48e4-af3f-d3442cf404de)
+![restaurantinho-3](https://github.com/monambike/virtual-restaurant-web/assets/35270174/c99b5679-f689-459b-85a7-58e0699c6284)
+
